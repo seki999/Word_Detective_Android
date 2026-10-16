@@ -1,25 +1,38 @@
 name: Android verification
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - uses: android-actions/setup-android@v3
-      - uses: gradle/actions/setup-gradle@v4
-      - run: python tools/validate_content.py
-      - run: python -m unittest discover -s tools -p 'test_*.py'
-      - run: chmod +x gradlew && ./gradlew assembleDebug testDebugUnitTest lintDebug assembleDebugAndroidTest --console=plain
-      - uses: actions/upload-artifact@v4
+      - name: Validate bundled content
+        run: python tools/validate_content.py
+      - name: Test content tools
+        run: python -m unittest discover -s tools -p 'test_*.py'
+      - name: Install required Android SDK packages
+        # GitHub's Ubuntu image supplies sdkmanager and accepted SDK licenses.
+        # The obsolete 'tools' package is deliberately excluded.
+        run: |
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install \
+            "platform-tools" "platforms;android-35" "build-tools;34.0.0"
+      - uses: gradle/actions/setup-gradle@v5
+      - name: Build, test and lint
+        run: ./gradlew assembleDebug testDebugUnitTest lintDebug assembleDebugAndroidTest --console=plain
+      - uses: actions/upload-artifact@v5
+        if: always()
         with:
           name: word-detective-debug
+          if-no-files-found: warn
           path: |
             app/build/outputs/apk/debug/*.apk
             app/build/reports/
