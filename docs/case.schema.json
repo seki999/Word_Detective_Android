@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://worddetective.local/schema/case-v1.json",
+  "title": "Word Detective Case v1",
+  "type": "object",
+  "required": [
+    "caseId",
+    "schemaVersion",
+    "title",
+    "description",
+    "vocabularyListId",
+    "requiredVocabularyIds",
+    "characters",
+    "scenes",
+    "chapters",
+    "dialogue",
+    "questions",
+    "clues",
+    "deductions",
+    "branches",
+    "endings",
+    "rewards",
+    "unlockConditions",
+    "steps"
+  ],
+  "properties": {
+    "caseId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "vocabularyListId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "requiredVocabularyIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "endings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "unlockConditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "dialogue": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "deductions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "branches": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "clues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "type": "object",
+      "required": [
+        "xp"
+      ],
+      "properties": {
+        "xp": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "title",
+          "en",
+          "zh",
+          "next"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "en": {
+            "type": "string",
+            "minLength": 1
+          },
+          "zh": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "dialogue",
+              "vocabulary",
+              "multiple_choice",
+              "listening",
+              "image_choice",
+              "fill_blank",
+              "clue",
+              "deduction",
+              "ending"
+            ]
+          },
+          "speaker": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "clue": {
+            "type": "string"
+          },
+          "words": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "requires": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "answers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "next": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "text"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "hint": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sceneLabel": {
+      "type": "string"
+    }
+  }
+}

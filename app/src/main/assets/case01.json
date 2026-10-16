@@ -1,0 +1,318 @@
+{
+  "caseId": "missing-sapphire",
+  "schemaVersion": 1,
+  "title": "The Missing Sapphire",
+  "description": "消失的蓝宝石 · 可玩案件切片",
+  "vocabularyListId": "list01",
+  "requiredVocabularyIds": [
+    "v000003",
+    "v000008",
+    "v000010"
+  ],
+  "characters": [
+    {
+      "id": "alex",
+      "name": "Alex Chen"
+    },
+    {
+      "id": "emma",
+      "name": "Emma Wilson"
+    },
+    {
+      "id": "miller",
+      "name": "Dr. Miller"
+    },
+    {
+      "id": "sophia",
+      "name": "Sophia Reed"
+    },
+    {
+      "id": "robert",
+      "name": "Robert Hayes"
+    },
+    {
+      "id": "david",
+      "name": "David Brown"
+    }
+  ],
+  "scenes": [],
+  "chapters": [
+    {
+      "id": "brief",
+      "title": "01 · 接受案件"
+    },
+    {
+      "id": "learn",
+      "title": "案件词汇 · inaugural"
+    },
+    {
+      "id": "gallery",
+      "title": "02 · 勘查博物馆"
+    },
+    {
+      "id": "guard",
+      "title": "03 · 询问保安"
+    },
+    {
+      "id": "camera",
+      "title": "04 · 分析监控"
+    },
+    {
+      "id": "witness",
+      "title": "05 · 访问证人"
+    },
+    {
+      "id": "lab",
+      "title": "06 · 分析物证"
+    },
+    {
+      "id": "contradiction",
+      "title": "07 · 整理矛盾证据"
+    },
+    {
+      "id": "confront",
+      "title": "08 · 嫌疑人对质"
+    },
+    {
+      "id": "deduce",
+      "title": "09 · 最终审讯"
+    },
+    {
+      "id": "truth",
+      "title": "追回蓝宝石"
+    },
+    {
+      "id": "end",
+      "title": "10 · 结案报告"
+    }
+  ],
+  "dialogue": [],
+  "questions": [],
+  "clues": [
+    {
+      "id": "access",
+      "title": "经理钥匙门禁记录"
+    },
+    {
+      "id": "camera",
+      "title": "同步监控记录"
+    },
+    {
+      "id": "photo",
+      "title": "Sophia的带时间戳照片"
+    },
+    {
+      "id": "glass",
+      "title": "玻璃检验报告"
+    },
+    {
+      "id": "recovered",
+      "title": "已追回的蓝宝石"
+    }
+  ],
+  "deductions": [],
+  "branches": [],
+  "endings": [
+    "end"
+  ],
+  "rewards": {
+    "xp": 100
+  },
+  "unlockConditions": [],
+  "steps": [
+    {
+      "id": "brief",
+      "type": "dialogue",
+      "title": "01 · 接受案件",
+      "en": "Emma: The sapphire vanished after the inaugural exhibition. The display was opened at 9:10 p.m. We must establish who had access.",
+      "zh": "Emma：蓝宝石在开幕展览后失踪。展柜于晚上9点10分被打开。我们必须查清谁有权限进入。",
+      "speaker": "emma",
+      "words": [
+        "v000003"
+      ],
+      "next": "learn"
+    },
+    {
+      "id": "learn",
+      "type": "vocabulary",
+      "title": "案件词汇 · inaugural",
+      "en": "Read the exhibition notice before entering the gallery.",
+      "zh": "进入展厅前，请阅读展览公告。",
+      "words": [
+        "v000003"
+      ],
+      "next": "gallery"
+    },
+    {
+      "id": "gallery",
+      "type": "clue",
+      "title": "02 · 勘查博物馆",
+      "en": "The access log records: 21:10, cabinet opened with manager key M1. Only Robert holds M1. No duplicate key was issued; the lock is intact.",
+      "zh": "门禁记录显示：21:10，展柜被经理钥匙M1打开。只有Robert持有M1，未配发备用钥匙，锁具完好。",
+      "clue": "access",
+      "speaker": "emma",
+      "next": "guard"
+    },
+    {
+      "id": "guard",
+      "type": "dialogue",
+      "title": "03 · 询问保安",
+      "en": "David: I stayed at the north entrance from 9:00 to 9:20. Robert says he was in his office throughout that period.",
+      "zh": "David：9点到9点20分我一直在北门。Robert说他在这段时间始终待在办公室。",
+      "speaker": "david",
+      "next": "camera"
+    },
+    {
+      "id": "camera",
+      "type": "listening",
+      "title": "04 · 分析监控",
+      "en": "Emma: Two cameras recorded simultaneously. The north camera shows David at his post at 9:10. The gallery camera shows Robert beside the cabinet at exactly the same time.",
+      "zh": "Emma：两台摄像机同步录像。北门摄像机显示David在9点10分仍在岗。展厅摄像机显示Robert恰在同一时间站在展柜旁。",
+      "speaker": "emma",
+      "words": [
+        "v000008"
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Robert was beside the cabinet. / Robert在展柜旁。"
+        },
+        {
+          "id": "b",
+          "text": "David entered the gallery. / David进入展厅。"
+        },
+        {
+          "id": "c",
+          "text": "The office was empty all evening. / 办公室整晚无人。"
+        },
+        {
+          "id": "d",
+          "text": "Both cameras stopped. / 两台摄像机都停止了。"
+        }
+      ],
+      "answer": "a",
+      "clue": "camera",
+      "next": "witness"
+    },
+    {
+      "id": "witness",
+      "type": "clue",
+      "title": "05 · 访问证人",
+      "en": "Sophia: At 9:12 I saw Robert leave the gallery with a blue pouch. I gave my time-stamped photograph to Emma. It shows his face and the pouch clearly.",
+      "zh": "Sophia：9点12分，我看到Robert带着一个蓝色小袋离开展厅。我把带时间戳的照片交给了Emma，照片清楚拍到了他的脸和小袋。",
+      "speaker": "sophia",
+      "clue": "photo",
+      "next": "lab"
+    },
+    {
+      "id": "lab",
+      "type": "multiple_choice",
+      "title": "06 · 分析物证",
+      "en": "Dr. Miller: The stone left in the display is glass. Its density is wrong for sapphire. It is a counterfeit. What does counterfeit mean here?",
+      "zh": "Miller博士：展柜里留下的石头是玻璃，它的密度与蓝宝石不符。它是一件赝品。这里counterfeit是什么意思？",
+      "speaker": "miller",
+      "words": [
+        "v000010"
+      ],
+      "options": [
+        {
+          "id": "fake",
+          "text": "A fake object / 赝品"
+        },
+        {
+          "id": "receipt",
+          "text": "A receipt / 收据"
+        },
+        {
+          "id": "lock",
+          "text": "A lock / 锁"
+        },
+        {
+          "id": "witness",
+          "text": "A witness / 证人"
+        }
+      ],
+      "answer": "fake",
+      "clue": "glass",
+      "next": "contradiction"
+    },
+    {
+      "id": "contradiction",
+      "type": "fill_blank",
+      "title": "07 · 整理矛盾证据",
+      "en": "The camera and access log contradict Robert’s office alibi. Two cameras recorded at the same time: they recorded ____.",
+      "zh": "监控和门禁记录与Robert的办公室不在场说法矛盾。两台摄像机在同一时间录像：它们____录像。",
+      "words": [
+        "v000008"
+      ],
+      "answer": "simultaneously",
+      "next": "confront",
+      "hint": "寻找表示“同时地”的副词。"
+    },
+    {
+      "id": "confront",
+      "type": "dialogue",
+      "title": "08 · 嫌疑人对质",
+      "en": "Select the two records that place Robert at the cabinet at exactly 9:10, disproving his office alibi.",
+      "zh": "选择两份能够证明Robert在9点10分身处展柜旁、从而推翻其办公室不在场说法的记录。",
+      "speaker": "alex",
+      "next": "deduce"
+    },
+    {
+      "id": "deduce",
+      "type": "deduction",
+      "title": "09 · 最终审讯",
+      "en": "Select the two independent records that directly disprove Robert’s claim that he stayed in his office.",
+      "zh": "选择两份能够直接推翻Robert“始终在办公室”说法的独立记录。",
+      "requires": [
+        "access",
+        "camera",
+        "photo",
+        "glass"
+      ],
+      "options": [
+        {
+          "id": "access",
+          "text": "Cabinet access log / 展柜门禁记录"
+        },
+        {
+          "id": "camera",
+          "text": "Synchronized video / 同步监控"
+        },
+        {
+          "id": "glass",
+          "text": "Glass density report / 玻璃密度报告"
+        },
+        {
+          "id": "photo",
+          "text": "Photo taken at 9:12 / 9点12分的照片"
+        }
+      ],
+      "answers": [
+        "access",
+        "camera"
+      ],
+      "next": "truth",
+      "hint": "比较21:10的钥匙记录和两台摄像机的同步画面。"
+    },
+    {
+      "id": "truth",
+      "type": "clue",
+      "title": "追回蓝宝石",
+      "en": "Robert: I replaced the sapphire with glass to sell it later. The blue pouch is in my office safe. Emma retrieves it with Robert present; Dr. Miller confirms the recovered stone is the missing sapphire.",
+      "zh": "Robert：我用玻璃替换蓝宝石，打算以后卖掉。蓝色小袋在我的办公室保险箱里。Emma在Robert在场时取出小袋；Miller博士确认找回的宝石就是失踪的蓝宝石。",
+      "clue": "recovered",
+      "speaker": "robert",
+      "next": "end"
+    },
+    {
+      "id": "end",
+      "type": "ending",
+      "title": "10 · 结案报告",
+      "en": "The sapphire is recovered. The key log and synchronized video establish Robert’s access and expose his false alibi. The photograph corroborates his departure. David is cleared by the north camera.",
+      "zh": "蓝宝石已追回。钥匙记录与同步录像证实Robert进入展柜并揭穿其虚假不在场证明。照片佐证了他的离开，北门录像则洗清了David的嫌疑。",
+      "next": null
+    }
+  ],
+  "sceneLabel": "MERIDIAN MUSEUM"
+}

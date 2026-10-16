@@ -1,0 +1,588 @@
+{
+  "caseId": "missing-relief-fund",
+  "schemaVersion": 1,
+  "title": "The Missing Relief Fund",
+  "description": "失踪的救助款 · List02",
+  "vocabularyListId": "list02",
+  "requiredVocabularyIds": [
+    "v000051",
+    "v000052",
+    "v000053",
+    "v000054",
+    "v000055",
+    "v000056",
+    "v000057",
+    "v000058",
+    "v000059",
+    "v000060",
+    "v000061",
+    "v000062",
+    "v000063",
+    "v000064",
+    "v000065",
+    "v000066",
+    "v000067",
+    "v000068",
+    "v000069",
+    "v000070",
+    "v000071",
+    "v000072",
+    "v000073",
+    "v000074",
+    "v000075",
+    "v000076",
+    "v000077",
+    "v000078",
+    "v000079",
+    "v000080",
+    "v000081",
+    "v000082",
+    "v000083",
+    "v000084",
+    "v000085",
+    "v000086",
+    "v000087",
+    "v000088",
+    "v000089",
+    "v000090",
+    "v000091",
+    "v000092",
+    "v000093",
+    "v000094",
+    "v000095",
+    "v000096",
+    "v000097",
+    "v000098",
+    "v000099",
+    "v000100"
+  ],
+  "sceneLabel": "CIVIC HALL · BENEFIT CONCERT",
+  "characters": [
+    {
+      "id": "alex",
+      "name": "Alex Chen"
+    },
+    {
+      "id": "emma",
+      "name": "Emma Wilson"
+    },
+    {
+      "id": "patel",
+      "name": "Dr. Patel"
+    },
+    {
+      "id": "nora",
+      "name": "Nora Ellis"
+    },
+    {
+      "id": "mateo",
+      "name": "Mateo Ruiz"
+    },
+    {
+      "id": "lena",
+      "name": "Lena Park"
+    },
+    {
+      "id": "victor",
+      "name": "Victor Shaw"
+    }
+  ],
+  "scenes": [],
+  "chapters": [
+    {
+      "id": "1",
+      "title": "义演后的求助"
+    },
+    {
+      "id": "2",
+      "title": "诊所与志愿者"
+    },
+    {
+      "id": "3",
+      "title": "活动记录"
+    },
+    {
+      "id": "4",
+      "title": "核对账目"
+    },
+    {
+      "id": "5",
+      "title": "操作权限与证词"
+    },
+    {
+      "id": "6",
+      "title": "追查收款公司"
+    },
+    {
+      "id": "7",
+      "title": "排除干扰"
+    },
+    {
+      "id": "8",
+      "title": "嫌疑人对质"
+    },
+    {
+      "id": "9",
+      "title": "最终推理与追回"
+    },
+    {
+      "id": "10",
+      "title": "结案报告"
+    }
+  ],
+  "dialogue": [],
+  "questions": [],
+  "clues": [
+    {
+      "id": "income",
+      "title": "捐款登记与全额入账确认"
+    },
+    {
+      "id": "transfer",
+      "title": "21:14银行转账记录"
+    },
+    {
+      "id": "token",
+      "title": "V7令牌权限与终端日志"
+    },
+    {
+      "id": "photo",
+      "title": "Lena的21:14抓拍照片"
+    },
+    {
+      "id": "ownership",
+      "title": "BrightStage公司所有权摘录"
+    },
+    {
+      "id": "recovered",
+      "title": "6,000美元转回确认"
+    }
+  ],
+  "deductions": [],
+  "branches": [],
+  "endings": [
+    "end"
+  ],
+  "rewards": {
+    "xp": 240
+  },
+  "unlockConditions": [],
+  "steps": [
+    {
+      "id": "brief",
+      "type": "dialogue",
+      "title": "01 · 义演后的求助",
+      "en": "Emma: A municipal clinic held a benefit concert at Civic Hall. Its distinguished guest, Dr. Patel, helped solicit donations for families. The treasurer says the event raised $24,000, but only $18,000 remains. Alex, help us trace the missing $6,000.",
+      "zh": "Emma：一家市立诊所在市民礼堂举办了慈善义演。著名嘉宾Patel医生帮助募集善款。财务负责人说活动筹得24,000美元，但现在只剩18,000美元。Alex，请帮我们追查失踪的6,000美元。",
+      "words": [
+        "v000090",
+        "v000100",
+        "v000079"
+      ],
+      "speaker": "emma",
+      "next": "mission"
+    },
+    {
+      "id": "mission",
+      "type": "dialogue",
+      "title": "01 · 查账前先厘清事实",
+      "en": "Alex: Altruism brought the donors here, but good intentions are not proof of honest bookkeeping. A facile explanation such as “the bank must be slow” is not enough. We need a reconciliation of the donor register, bank statement, and ledger.",
+      "zh": "Alex：利他之心让捐款人聚集于此，但善意不能证明账目诚实。“银行一定处理得慢”这种肤浅的解释并不足够。我们需要核对捐款登记簿、银行流水和分类账，使三者一致。",
+      "words": [
+        "v000060",
+        "v000056",
+        "v000051"
+      ],
+      "speaker": "alex",
+      "next": "beneficiaries"
+    },
+    {
+      "id": "beneficiaries",
+      "type": "dialogue",
+      "title": "02 · 诊所的项目说明",
+      "en": "Dr. Patel: The fund will repair ventilation in our clinic after a sewage leak. It also supports children with congenital heart conditions. One patient described the exquisite pain she felt before treatment. These details explain the appeal; none identifies a thief.",
+      "zh": "Patel医生：这笔资金将用于污水泄漏后诊所通风系统的维修，也会帮助患有先天性心脏病的儿童。一名患者描述了治疗前感受到的剧痛。这些资料说明募款的用途，并不能据此认定谁是窃贼。",
+      "words": [
+        "v000091",
+        "v000082",
+        "v000074",
+        "v000086"
+      ],
+      "speaker": "patel",
+      "next": "medical-note"
+    },
+    {
+      "id": "medical-note",
+      "type": "dialogue",
+      "title": "02 · 医疗资料的边界",
+      "en": "Dr. Patel: A teaching poster discusses pulmonary congestion in a clinical case; it is unrelated to the traffic delay outside. Another poster asks why some people are immune to certain infections. Patient privacy is important. No patient records are needed for this financial inquiry.",
+      "zh": "Patel医生：一张教学海报在一个临床病例中讨论了肺淤血；它与外面的交通延误无关。另一张海报提出，为什么一些人对某些感染具有免疫力。患者隐私很重要，这次财务调查不需要患者病历。",
+      "words": [
+        "v000077",
+        "v000098"
+      ],
+      "speaker": "patel",
+      "next": "charter"
+    },
+    {
+      "id": "charter",
+      "type": "dialogue",
+      "title": "02 · 章程与志愿者",
+      "en": "Nora: I am the director-designate, so I have not taken office yet. The old charter uses formal language: “The trustees ordain that relief money be used only for clinic work.” I am a congenital optimist, but even I insist that a charity must never be immune from scrutiny.",
+      "zh": "Nora：我是已获任命但尚未就职的主任。旧章程用了正式措辞：“理事规定，救助款只能用于诊所工作。”我向来是个乐观主义者，但即便如此，我也坚持慈善机构绝不能免于审查。",
+      "words": [
+        "v000059",
+        "v000054",
+        "v000075",
+        "v000099"
+      ],
+      "speaker": "nora",
+      "next": "volunteer"
+    },
+    {
+      "id": "volunteer",
+      "type": "dialogue",
+      "title": "02 · 志愿者的背景资料",
+      "en": "Nora: One volunteer is preparing a church ceremony. “Our bishop will ordain two deacons next week,” he told me. He had no access to our accounts. Please do not mistake an unfamiliar occupation for evidence of wrongdoing.",
+      "zh": "Nora：一名志愿者正在筹备教会仪式。他对我说：“我们的主教下周将授予两位执事圣职。”他没有访问我们账目的权限。请不要把不熟悉的职业误当成违法证据。",
+      "words": [
+        "v000053"
+      ],
+      "speaker": "nora",
+      "next": "stage"
+    },
+    {
+      "id": "stage",
+      "type": "dialogue",
+      "title": "03 · 舞台与活动记录",
+      "en": "Mateo: Tonight was singer Iris Lane’s debut. A versatile musician, she can sing and play three instruments. Her facile piano playing made the difficult passage sound effortless. A youth ensemble will debut its new work here next month.",
+      "zh": "Mateo：今晚是歌手Iris Lane的首次亮相。她是一位多才多艺的音乐人，能唱歌，还能演奏三种乐器。她流畅自如的钢琴演奏使那段困难的乐句听起来毫不费力。一支青年乐团下个月将在这里首次演出他们的新作品。",
+      "words": [
+        "v000080",
+        "v000089",
+        "v000057",
+        "v000081"
+      ],
+      "speaker": "mateo",
+      "next": "auction"
+    },
+    {
+      "id": "auction",
+      "type": "dialogue",
+      "title": "03 · 拍卖清单",
+      "en": "Lena: The auction catalogue lists a signed football jersey and a scarf made from soft jersey fabric. An exquisite silver brooch has a small blemish on its clasp. Its intrinsic value lies in its craftsmanship, not in the fame of the donor. All auction proceeds are already included in the $24,000 total.",
+      "zh": "Lena：拍卖目录列有一件签名足球球衣和一条柔软针织面料制成的围巾。一枚精美的银胸针在搭扣处有个小瑕疵。它的内在价值在于工艺，而非捐赠者的名气。所有拍卖款都已计入24,000美元的总额。",
+      "words": [
+        "v000061",
+        "v000062",
+        "v000085",
+        "v000072",
+        "v000065"
+      ],
+      "speaker": "lena",
+      "next": "publicity"
+    },
+    {
+      "id": "publicity",
+      "type": "dialogue",
+      "title": "03 · 宣传资料",
+      "en": "Emma: The event manager chose to tout the concert as the season’s highlight. Outside, a ticket tout offered seats at inflated prices. The poster promised to solicit suggestions from residents about future events. None of this accounts for money already received by the bank.",
+      "zh": "Emma：活动经理将这场音乐会大力宣传为本季的亮点。外面，一名黄牛以高价兜售座位。海报承诺向居民征求今后活动的建议。这些情况都无法解释银行已经收到的款项为何减少。",
+      "words": [
+        "v000063",
+        "v000064",
+        "v000078"
+      ],
+      "speaker": "emma",
+      "next": "register"
+    },
+    {
+      "id": "register",
+      "type": "clue",
+      "title": "04 · 核对收入来源",
+      "en": "Emma: The sealed donor register totals $24,000. The bank statement confirms all $24,000 arrived. There were no pending deposits. This rules out the suggestion that delayed incoming payments caused the $6,000 gap.",
+      "zh": "Emma：封存的捐款登记簿合计24,000美元。银行流水确认24,000美元全部到账，没有待处理的入账。这排除了“入账延迟造成6,000美元差额”的说法。",
+      "words": [],
+      "clue": "income",
+      "speaker": "emma",
+      "next": "ledger"
+    },
+    {
+      "id": "ledger",
+      "type": "clue",
+      "title": "04 · 一笔不寻常的转账",
+      "en": "Emma: The ledger labels a $6,000 payment at 21:14 as “donor refund.” The authenticated bank statement instead names BrightStage Services as the recipient. BrightStage is not listed as a donor. Nora did not authorize a purchase from that company.",
+      "zh": "Emma：分类账把21:14的一笔6,000美元付款标为“捐款人退款”。经过核验的银行流水却将收款方列为BrightStage Services。BrightStage不在捐款人名单上，Nora也没有批准向该公司采购。",
+      "words": [],
+      "clue": "transfer",
+      "speaker": "emma",
+      "next": "bank-question"
+    },
+    {
+      "id": "bank-question",
+      "type": "multiple_choice",
+      "title": "04 · 判断已知事实",
+      "en": "Alex: The full $24,000 arrived, and $6,000 then went to BrightStage. Which explanation is directly contradicted by the bank record?",
+      "zh": "Alex：24,000美元全部到账，之后有6,000美元转给了BrightStage。哪种解释被银行记录直接否定？",
+      "words": [],
+      "speaker": "alex",
+      "requires": [
+        "income",
+        "transfer"
+      ],
+      "options": [
+        {
+          "id": "late",
+          "text": "Some donations have not arrived. / 有些捐款尚未到账。"
+        },
+        {
+          "id": "outgoing",
+          "text": "An outgoing transfer reduced the balance. / 一笔转出使余额减少。"
+        },
+        {
+          "id": "received",
+          "text": "The bank received $24,000. / 银行收到24,000美元。"
+        },
+        {
+          "id": "recipient",
+          "text": "BrightStage received $6,000. / BrightStage收到6,000美元。"
+        }
+      ],
+      "answer": "late",
+      "hint": "区分尚未入账的收入与已经发生的支出。银行确认24,000美元全部到账。",
+      "next": "permissions"
+    },
+    {
+      "id": "permissions",
+      "type": "clue",
+      "title": "05 · 谁能操作账户",
+      "en": "Nora: Our policy is to designate one payment officer. This month that officer is Victor Shaw, the treasurer. The signed access register says only Victor holds token V7. It cannot be shared remotely. The terminal log records his token and personal PIN approving the 21:14 transfer.",
+      "zh": "Nora：我们的规定是指定一名付款负责人。本月的负责人是财务主管Victor Shaw。签字确认的权限登记表显示，只有Victor持有令牌V7，且不能远程共享。终端日志记录了他的令牌和个人密码批准21:14转账的操作。",
+      "words": [
+        "v000058"
+      ],
+      "clue": "token",
+      "speaker": "nora",
+      "next": "witness"
+    },
+    {
+      "id": "witness",
+      "type": "listening",
+      "title": "05 · 听取摄影师证词",
+      "en": "Lena: I value punctuality, so I arrived at 21:00 despite the traffic congestion. At 21:14 I took a candid photograph through the open office door. It clearly shows Victor at the payment terminal. The terminal clock and my camera clock were checked against the same hall clock.",
+      "zh": "Lena：我重视守时，因此尽管交通拥堵，仍在21:00到达。21:14，我透过敞开的办公室门抓拍了一张照片，清楚拍到了付款终端前的Victor。终端时钟和我的相机时钟都已与同一座礼堂时钟核对。",
+      "words": [
+        "v000055",
+        "v000076",
+        "v000067"
+      ],
+      "clue": "photo",
+      "speaker": "lena",
+      "requires": [
+        "token"
+      ],
+      "options": [
+        {
+          "id": "victor",
+          "text": "Victor was at the terminal at 21:14. / Victor在21:14位于终端前。"
+        },
+        {
+          "id": "mateo",
+          "text": "Mateo approved the transfer. / Mateo批准了转账。"
+        },
+        {
+          "id": "refund",
+          "text": "Lena received a donor refund. / Lena收到了捐款退款。"
+        },
+        {
+          "id": "left",
+          "text": "Victor left before 21:00. / Victor在21:00之前离开。"
+        }
+      ],
+      "answer": "victor",
+      "hint": "留意Lena报出的21:14，以及她照片中出现的人。",
+      "next": "statement"
+    },
+    {
+      "id": "statement",
+      "type": "dialogue",
+      "title": "06 · 财务主管的说法",
+      "en": "Victor: Let me be candid: I left at 21:00. I was oblivious to any later transfer. Alex: That conflicts with the photograph and token log. Please do not allude to unnamed volunteers; give us a specific explanation.",
+      "zh": "Victor：我坦率地说，我21:00就离开了。我完全不知道之后的任何转账。Alex：这与你的照片和令牌日志矛盾。请不要影射没有姓名的志愿者，请给出具体解释。",
+      "words": [
+        "v000066",
+        "v000088",
+        "v000071"
+      ],
+      "speaker": "victor",
+      "requires": [
+        "token",
+        "photo"
+      ],
+      "next": "ownership"
+    },
+    {
+      "id": "ownership",
+      "type": "clue",
+      "title": "06 · 查明收款公司",
+      "en": "Emma: A certified company extract shows that BrightStage is a wholly owned subsidiary of Shaw Events, and Victor is Shaw Events’ sole owner. The extract predates the concert. The charity has no contract or unpaid invoice with either company.",
+      "zh": "Emma：经认证的公司登记摘录显示，BrightStage是Shaw Events的全资子公司，而Victor是Shaw Events的唯一所有者。该摘录形成于音乐会之前。慈善机构与这两家公司都没有合同或未付发票。",
+      "words": [
+        "v000092"
+      ],
+      "clue": "ownership",
+      "speaker": "emma",
+      "next": "distractions"
+    },
+    {
+      "id": "distractions",
+      "type": "dialogue",
+      "title": "07 · 排除无关损坏",
+      "en": "Mateo: A peripheral device, the receipt printer, failed earlier. A subsidiary report discusses that repair. The printer fault is peripheral to the transfer: the bank’s independent record is intact. We should not let a broken printer distract us from the money trail.",
+      "zh": "Mateo：一台计算机外设——收据打印机——早先出了故障。一份附属报告讨论了这项维修。打印机故障对于转账只是次要问题，银行的独立记录完好。我们不应让坏掉的打印机分散追查资金去向的注意力。",
+      "words": [
+        "v000095",
+        "v000093",
+        "v000094"
+      ],
+      "speaker": "mateo",
+      "next": "report"
+    },
+    {
+      "id": "report",
+      "type": "dialogue",
+      "title": "07 · 不能以文风定罪",
+      "en": "Emma: Some paragraphs in the public report match last year’s text. The editor admits, “I chose to plagiarize the old introduction.” Copying may blemish the charity’s reputation, but it does not prove who transferred the money. The payment evidence must stand on its own.",
+      "zh": "Emma：公开报告的某些段落与去年的文本相同。编辑承认：“我选择抄袭了旧的引言。”抄袭可能损害慈善机构的声誉，却不能证明是谁转走了钱。付款证据必须独立成立。",
+      "words": [
+        "v000052",
+        "v000073"
+      ],
+      "speaker": "emma",
+      "next": "impact"
+    },
+    {
+      "id": "impact",
+      "type": "dialogue",
+      "title": "07 · 回到受损的援助",
+      "en": "Dr. Patel: Delayed repairs can inflict hardship on families and deprive patients of a suitable place for care. The bank has offered to compensate the charity if its investigation establishes liability. Extra volunteer hours may compensate for some disruption, but they cannot replace the missing cash.",
+      "zh": "Patel医生：维修延误可能使家庭遭受困难，并剥夺患者获得合适照护场所的机会。银行表示，若调查确认其承担责任，将赔偿慈善机构。增加志愿服务时间或许能弥补部分干扰，却不能取代失踪的现金。",
+      "words": [
+        "v000083",
+        "v000084",
+        "v000096",
+        "v000097"
+      ],
+      "speaker": "patel",
+      "next": "method"
+    },
+    {
+      "id": "method",
+      "type": "fill_blank",
+      "title": "08 · 重建付款路径",
+      "en": "Alex: We do not need an ingenious theory about stolen cash. The records show an electronic transfer to a company Victor controls. BrightStage is a wholly owned ____ of Shaw Events.",
+      "zh": "Alex：我们不需要编造巧妙的现金失窃理论。记录显示，款项被电子转账至Victor控制的公司。BrightStage是Shaw Events的全资____。",
+      "words": [
+        "v000087",
+        "v000092"
+      ],
+      "speaker": "alex",
+      "answer": "subsidiary",
+      "requires": [
+        "transfer",
+        "ownership"
+      ],
+      "hint": "查看公司登记摘录：BrightStage与Shaw Events是子公司关系。",
+      "next": "confront"
+    },
+    {
+      "id": "confront",
+      "type": "dialogue",
+      "title": "08 · 与财务主管对质",
+      "en": "Alex: Music can beguile an audience, but a misleading label must not beguile the committee. Victor: It was a legitimate expense. Alex: There is no authorized contract or unpaid invoice. A label cannot change the bank’s named recipient.",
+      "zh": "Alex：音乐可以迷住观众，但一个误导性的标签不能欺骗委员会。Victor：那是一笔合法开支。Alex：没有经过授权的合同，也没有未付的发票。标签改变不了银行记录中的收款方。",
+      "words": [
+        "v000069",
+        "v000070"
+      ],
+      "speaker": "victor",
+      "requires": [
+        "transfer",
+        "token",
+        "photo",
+        "ownership"
+      ],
+      "next": "deduce"
+    },
+    {
+      "id": "deduce",
+      "type": "deduction",
+      "title": "09 · 资金去向的最终推理",
+      "en": "Alex: Select exactly two documents: one identifies where the $6,000 was sent, and the other establishes who legally controls that recipient. We have already collected both.",
+      "zh": "Alex：请选择恰好两份文件：一份确认6,000美元汇往何处，另一份确认谁在法律上控制该收款方。这两份文件我们都已经收集。",
+      "words": [],
+      "speaker": "alex",
+      "requires": [
+        "transfer",
+        "ownership",
+        "token",
+        "photo"
+      ],
+      "options": [
+        {
+          "id": "transfer",
+          "text": "Authenticated bank transfer / 经核验的银行转账记录"
+        },
+        {
+          "id": "ownership",
+          "text": "Certified ownership extract / 经认证的公司所有权摘录"
+        },
+        {
+          "id": "photo",
+          "text": "Lena’s photograph / Lena的照片"
+        },
+        {
+          "id": "income",
+          "text": "Donor income register / 捐款收入登记簿"
+        }
+      ],
+      "answers": [
+        "transfer",
+        "ownership"
+      ],
+      "hint": "照片说明谁在现场，收入登记说明收到多少；题目要求的是收款去向和公司所有权。",
+      "next": "recovery"
+    },
+    {
+      "id": "recovery",
+      "type": "clue",
+      "title": "09 · 追回捐款",
+      "en": "Victor: I will capitulate. I moved the money to my company without permission and called it a refund. Emma: With Victor’s written authorization, the bank has returned the full $6,000. The new statement confirms the charity again holds $24,000. This is recovery of funds, not a promise of future repayment.",
+      "zh": "Victor：我认输了。我未经许可把钱转到自己的公司，还把它称为退款。Emma：依据Victor的书面授权，银行已将6,000美元全额转回。新流水确认慈善机构再次持有24,000美元。这是已经追回的资金，而不是将来还钱的承诺。",
+      "words": [
+        "v000068"
+      ],
+      "clue": "recovered",
+      "speaker": "emma",
+      "next": "end"
+    },
+    {
+      "id": "end",
+      "type": "ending",
+      "title": "10 · 结案报告",
+      "en": "The bank record traced the missing funds to BrightStage. The ownership extract linked that company to Victor. His exclusive token and Lena’s photograph established his involvement and refuted his departure claim. The complete incoming deposit ruled out delayed donations. The $6,000 has been recovered; the clinic’s repairs can proceed.",
+      "zh": "银行记录追踪到失踪款项进入BrightStage，公司所有权摘录证明该公司与Victor的关系。他独占的令牌和Lena的照片证实了他的参与，并推翻了其已经离开的说法。完整入账记录排除了捐款延迟到账的解释。6,000美元已被追回，诊所维修可以继续。",
+      "words": [],
+      "requires": [
+        "income",
+        "transfer",
+        "token",
+        "photo",
+        "ownership",
+        "recovered"
+      ],
+      "speaker": "emma",
+      "next": null
+    }
+  ]
+}

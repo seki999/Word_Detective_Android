@@ -1,0 +1,7 @@
+/.source-vocabulary/
+/.gradle/
+/local.properties
+/**/build/
+*.jks
+*.keystore
+__pycache__/
